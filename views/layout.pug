@@ -1,0 +1,18 @@
+doctype html
+html(lang='fr')
+  head
+    title ExpressJS tutorial : Flash Cards
+    link(rel='stylesheet', href='/static/stylesheet/style.css')
+  body
+    include includes/header.pug
+    br
+    if name
+      div#name
+        h1#welcome Welcome #{name} ! 
+        form(action='/goodbye', method='post')#goodbye
+          button(type='submit') Goodbye
+        
+    block content
+      
+    include includes/footer.pug
+    
